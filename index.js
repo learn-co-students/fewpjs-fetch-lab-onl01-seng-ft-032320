@@ -1,4 +1,13 @@
+const url = 'https://anapioficeandfire.com/api/books';
+
 function fetchBooks() {
+
+  return fetch(url).then(function(response) {
+    return response.json();
+  }).then(function(json) {
+      console.log(json)
+      renderBooks(json);
+  });
 
 }
 
